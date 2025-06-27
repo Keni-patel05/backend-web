@@ -162,6 +162,11 @@ const createDefaultAdmin = async () => {
 };
 createDefaultAdmin();
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
+
 // Start server on env PORT or 5000
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server running on http://localhost:${process.env.PORT || 5000}`);
